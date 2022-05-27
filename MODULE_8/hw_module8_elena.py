@@ -39,19 +39,19 @@ current_date8 = current_datetime8.date()
 d1 = datetime(year=2001, month=5, day=27)
 d1_d = d1.date()
 
-d2 = datetime(year=2002, month=5, day=27)
+d2 = datetime(year=2002, month=5, day=28)
 d2_d = d2.date()
 
-d3 = datetime(year=2001, month=5, day=28)
+d3 = datetime(year=2001, month=5, day=29)
 d3_d = d3.date()
 
-d4 = datetime(year=2000, month=5, day=29)
+d4 = datetime(year=2000, month=5, day=30)
 d4_d = d4.date()
 
-d5 = datetime(year=2001, month=5, day=30)
+d5 = datetime(year=2001, month=5, day=31)
 d5_d = d5.date()
 
-d6 = datetime(year=2001, month=5, day=31)
+d6 = datetime(year=2001, month=6, day=1)
 d6_d = d6.date()
 
 d7 = datetime(year=1991, month=6, day=2)
@@ -68,8 +68,10 @@ def get_birthdays_per_week(users):
     users_birthdays3 = ['Wednesday']
     users_birthdays4 = ['Thursday', ]
     users_birthdays5 = ['Friday', ]
-    users_birthdays6 = ['Saturday', ]
-    users_birthdays7 = [f'Sunday (Congratulations on Monday {current_date8})']
+    users_birthdays6 = [
+        f'Saturday (Congratulations on Monday {current_date8})', ]
+    users_birthdays7 = [
+        f'Sunday (Congratulations on Monday {current_date8})', ]
     for user in users:
         for _, value in user.items():
             if current_date1.day == user.get('birthday').day and current_date1.month == user.get('birthday').month:
