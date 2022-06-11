@@ -3,8 +3,9 @@ def input_error(func):
         try:
             result = func(*args, **kwargs)
         except (KeyError, ValueError, IndexError):
-            print("Enter correct user name and phone: ")
-        return result
+            print("Repeat and enter correct user name and phone")
+        else:    
+            return result
     return wrapper
 
 
